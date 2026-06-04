@@ -1,0 +1,59 @@
+/*=========== GOOGLE FONTS ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*========= VARIABLES CSS ===========*/
+:root {
+    --heeader-height: 3.5rem;
+
+    /*==== Colors ======*/
+    /*Color mode HSL (hue, saturation, lightness)*/
+    --first-color: hsl(28, 95%, 60%);
+    --first-color-alt: hsl(28, 95%, 56%);
+    --beige-color: hsl(40, 45%, 86%);
+    --beige-color-light: hsl(40, 45%, 94%);
+    --beige-color-alt: hsl(40, 35%, 72%);
+    --brown-color: hsl(18, 15%, 24%);
+    --title-color: hsl(0, 0, 6%);
+    --text-color: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 98%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(0, 0%, 96%);
+    --border-color: hsl(0, 0%, 85%);
+
+    /*======= Font and typography =====*/
+    /* .5rem = 8px , 1rem = 16px ....*/
+    --body-font: "Montserrat" , sans-serif;
+    --second-font: "Chakra petch", sans-serif;
+    --biggest-font-size: 1.875rem;
+    --big-font-size: 1.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75;
+
+    /*====== Font weight =======*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*============ z index ======*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*======== Responsive typography =======*/
+@media screen and (width >= 1150px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
