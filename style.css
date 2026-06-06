@@ -171,7 +171,7 @@ img {
     .nav__menu{
         position: fixed;
         top: 0;
-        right: 0;
+        right: -120%;
         background-color: var(--body-color);
         width: 300px;
         height: 100%;
@@ -194,8 +194,36 @@ img {
     transition: color .4s;
 }
 
-/* Show menu */
+.nav__link:hover{
+    color: var(--first-color);
+}
 
+.nav__button{
+    background-color: var(--first-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    transition: background-color .4s;
+}
+
+.nav__button:hover{
+    background-color: var(--first-color-alt);
+    color: var(--title-color);
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* Show menu */
+.show-menu{
+    right: 0;
+}
 
 /* Change header styles */
 
@@ -209,4 +237,72 @@ img {
 /*========= BUTTON =======*/
 
 
-/*======== ABOUT SECTION
+/*======== ABOUT SECTION =======*/
+
+
+/*============ WORKS SECTION ==============*/
+
+
+/* SWIPER CLASS */
+
+
+/*========== SERVICES SECTION ==========*/
+
+
+/* SWIPER CLASS */
+
+
+/*================= EXPERTD SECTION ==============*/
+
+
+/*=========== CONTACT SECTION ===========*/
+
+
+/*================= FOOTER ============*/
+
+
+/*================= SCROLL BAR ===========*/
+
+
+/*=================== SCROLL UP ==============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ==========*/
+/* For small  devices <> */
+
+
+/* For medium devices <> */
+
+
+/* For large devices <> */
+@media (width >= 1150px){
+    .container{
+        margin-inline: auto;
+    }
+
+    .section{
+        padding-block: 7rem 5rem;
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 2rem);
+    }
+    .nav__toggle,
+    .nav__close{
+        display: none;
+    }
+    .nav__list{
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4rem;
+    }
+    .nav__link{
+        color: var(--white-color);
+    }
+    
+}
+
+/* FOR 2K resolutions <> */
