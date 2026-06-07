@@ -49,8 +49,8 @@ const swiperWork = new Swiper('.work__swiper', {
     },
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.work__data .swiper-button-next',
+        prevEl: '.work__data .swiper-button-prev',
     },
 })
 
