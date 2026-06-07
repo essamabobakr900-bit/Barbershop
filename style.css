@@ -350,7 +350,23 @@ img {
 }
 
 /*============ WORKS SECTION ==============*/
+.work{
+    background-color: var(--beige-color);
+}
 
+.work__container{
+    row-gap: 4rem;
+}
+
+.work__description{
+    text-align: center;
+}
+
+.work__img,
+.work__card{
+    width: 250px;
+    border-radius: 1.5rem;
+}
 
 /* SWIPER CLASS */
 
