@@ -103,3 +103,65 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive)
 
 /*============= GSAP ANIMATION =============*/
+const reveal = (selector, options = {}) => {
+    gsap.from(selector, {
+        scrollTrigger: selector,
+        opacity: 0,
+        duration: 1,
+        y: 100,
+        delay: .3,
+        ease: 'power2.out',
+        ...options
+    })
+}
+
+/* Home animation */
+const tl = gsap.timeline({})
+tl.fromTo(
+    '.home__bg, .home__shadow',
+    {
+        y: -800,
+        scale: .3,
+        opacity: 0
+    },
+    {
+        y: 0,
+        scale: .3,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out'
+    }
+)
+tl.to(
+    '.home__bg, .home__shadow',
+    {
+        scale: 1,
+        duration: 1,
+        ease: 'back.out(0.5)'
+    }
+)
+
+/* Home background animation */
+tl.to(
+    '.home__bg',
+    {
+        scale: 1.08,
+        duration: 8,
+        ease: 'power1.inOut',
+        yoyo: true,
+        transformOrigin: 'center center'
+    }
+)
+
+
+reveal('.home__logo', {y: 0, scale: .3, delay: 1.9, ease: 'elastic.out(0.8, 0.5)'})
+reveal('.home__title', {delay: 2.2})
+reveal('.home__description', {delay: 2.5})
+reveal('.home__data .button', {delay: 2.8})
+
+/* The nav animation only works in the home section*/
+if(window.scrollY < 100){
+    reveal('.nav > *', {delay: 1.6, y: -30})
+} else{
+    gsap.set('.nav > *', {opacity: 1, y: 0})
+}
