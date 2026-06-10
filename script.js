@@ -165,3 +165,45 @@ if(window.scrollY < 100){
 } else{
     gsap.set('.nav > *', {opacity: 1, y: 0})
 }
+
+/* About animation */
+reveal('.about__data > *', {stagger: .2})
+reveal('.about__img', {delay: .9})
+
+const aboutCounter = document.querySelectorAll('.about__counter')
+aboutCounter.forEach(el => {
+    gsap.from(el, {
+        textContent: 0,
+        duration: 3,
+        ease: 'power1.out',
+        snap: { textContent: 1 },
+        scrollTrigger: {trigger: el, once: true}
+    })
+})
+
+/* Work animation */
+reveal('.word__data .section__title', {})
+reveal('.work__description', {delay: .6})
+reveal('.work__data .swiper-pagination', {delay: .9})
+reveal('.work__data :is(.swiper-button-prev, .swiper-button-next)', {delay: 1.2})
+reveal('.work__swiper', {delay: .9})
+
+/* Service animation */
+reveal('.service__data .section__title', {})
+reveal('.service__plan', {delay: .6, stagger: .2})
+reveal('.service__swiper', {delay: .9, stagger: .2})
+
+/* Expert animation */
+reveal('.expert .section__title', {})
+reveal('.expert__description', {delay: .6})
+reveal('.expert__card', {delay: .9, stagger: .2})
+
+/* Contact animation */
+reveal('.contact__data .section__title', {})
+reveal('.contact__description', {delay: .6})
+reveal('.contact__data .button', {delay: .9, y: 0, scale: 0})
+reveal('.contact__map', {delay: .9})
+reveal('.contact__card', {delay: 1.2, stagger: .2})
+
+/* Footer animation */
+reveal('.footer__container', {})
